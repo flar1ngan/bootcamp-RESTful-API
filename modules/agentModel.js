@@ -16,7 +16,7 @@ const agentSchema = new mongoose.Schema({
     },
     agentAccessibility: {
         type: String,
-        default: "From beginning"
+        default: "Always"
     },
 }, {
     timestamps: true

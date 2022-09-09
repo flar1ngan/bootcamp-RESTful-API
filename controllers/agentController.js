@@ -48,3 +48,12 @@ export const updateAgent = async (req, res) => {
         console.error(error);
     }
 };
+
+export const deleteAgentsByAccessibility = async (req, res) => {
+    try {
+        await agentModel.deleteMany({agentAccessibility: req.params.agentAccessibility});
+        res.status(200).send(`Agents with accessibility ${req.params.agentAccessibility} were removed!`);
+    } catch (error) {
+        console.error(error);
+    }
+};
